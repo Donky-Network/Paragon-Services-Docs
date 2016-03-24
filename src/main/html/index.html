@@ -36,7 +36,8 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        url = "http://petstore.swagger.io/v2/swagger.json";
+        // expect this in the root
+        url = "swagger.json";
       }
 
       hljs.configure({
