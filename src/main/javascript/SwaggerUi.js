@@ -197,6 +197,12 @@ window.SwaggerUi = Backbone.Router.extend({
         return base + url;
       }
 
+      var parts = base.split('/');
+      if (parts[parts.length -1].indexOf(".") !== -1){
+          parts.splice(parts.length -1, 1);
+          base = parts.join("/");
+      }
+
       return base + '/' + url;
     }
   },
